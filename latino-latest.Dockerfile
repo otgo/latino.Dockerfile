@@ -1,5 +1,5 @@
-FROM debian:buster
-LABEL com.telegram-bot.vendor="Latino"
+FROM debian:jessie
+LABEL org.lenguaje-latino.vendor="Latino"
 ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
 RUN apt update
@@ -16,3 +16,6 @@ WORKDIR latino
 RUN cmake . && \
   make && \
   make install
+WORKDIR /tmp
+RUN rm latino -r
+CMD [ "latino" ]
