@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stable
 LABEL org.lenguaje-latino.vendor="Latino"
 ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
